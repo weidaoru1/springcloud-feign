@@ -1,0 +1,17 @@
+server:
+  port: 8082
+
+#配置服务名称
+spring:
+  application:
+    name: springcloud-feign
+
+#eureka 的连接地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8070:8070/eureka/,http://eureka8071:8071/eureka/
+#开启hystrix 服务熔断功能
+feign:
+  hystrix:
+    enabled: true
